@@ -1,15 +1,18 @@
 doctype html
 html(lang="en")
   head
-  title="Hunter Assisant #{namej}"
+  title="Hunter Assisant"
   link(rel="stylesheet", href="#{asset('/css/bootstrap.css')}")
+  link(rel="stylesheet", href="#{asset('/css/application.css')}")
   body
-    nav(class='navbar navbar-default')
-      div(class="container")
-        div(class="navbar-header")
-        button(class="navbar-toggle collapsed", type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1",aria-expanded="false")
-          each val in [1, 2, 3]
-             span(class="icon-bar")
-        a(class="navbar-brand", href="#") Brand
-        div(class="collapse navbar-collapse")
-    block content
+    div(class="header")
+      nav(class='navbar navbar-default')
+        div(class="container")
+          div(class="navbar-header")
+            a(class="navbar-brand", href="/")
+              img(src="#{asset('/image/brand.png')}", alt="Brand", width="20", height="20")
+          p(class="navbar-text") Hunter Assisant SaaS Version
+          button(class="btn btn-default btn-success navbar-btn navbar-right", type="button") Sign in
+    div(class="container")
+      block content
+    div(class="container footer") 

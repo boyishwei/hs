@@ -1,4 +1,4 @@
-var jobSchema = mongoose.Schema({
+var positionSchema = mongoose.Schema({
   title: String,
   company_id: String,
   tech_catgray: String,
@@ -8,4 +8,6 @@ var jobSchema = mongoose.Schema({
   salary_rank: String,
 })
 
-var Job = mongoose.model('job', jobSchema)
+var Position = mongoose.model('position', positionSchema)
+
+module.exports = Position
