@@ -1,4 +1,6 @@
 module.exports = function(app){
+  var mongoose = require('mongoose')
+  mongoose.connect('mongodb://localhost/hs');
   app.get('/', function (req, res) {
     res.render('demo', {title: 'Hey',message: 'Hello There!'})
   })
@@ -7,7 +9,8 @@ module.exports = function(app){
     res.render('position/new', {title: 'Hey',message: 'Hello There!'})
   })
 
-  require('./positions')(app)
+  require('./position')(app)
+  require('./user')(app)
 
   app.use(function(err, req, res, next){
       console.log('unhandled error detected: ' + err.message);

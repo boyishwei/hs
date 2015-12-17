@@ -4,14 +4,14 @@ block content
   form(action="/position/save")
     div(class="form-group")
       label(class="form-group-addon",id="basic-addon") Job ID 
-      input(class=type="text", class="form-control", placeholder="猎上职位ID" ,aria-describedby="basic-addon1")
+      input(class=type="text", class="form-control", placeholder="猎上职位ID" ,aria-describedby="basic-addon1", name="job_id")
     div(class="form-group")
       label(class="form-group-addon",id="basic-addon") Title
-      input(class=type="text", class="form-control", placeholder="职位ID" ,aria-describedby="basic-addon1")
+      input(class=type="text", class="form-control", placeholder="职位ID" ,aria-describedby="basic-addon1", name="title")
     div(class="form-group")
       label(class="form-group-addon",id="basic-addon1") Description 
-      textarea(class=type="text", class="form-control", placeholder="职位描述" ,aria-describedby="basic-addon1", rows="5")
+      textarea(class=type="text", class="form-control", placeholder="职位描述" ,aria-describedby="basic-addon1", rows="5", name="desc")
     div(class="form-group")
       label(class="form-group-addon",id="basic-addon1") Qualifications 
-      textarea(class=type="text", class="form-control", placeholder="任职要求" ,aria-describedby="basic-addon1", rows="5")
+      textarea(class=type="text", class="form-control", placeholder="任职要求" ,aria-describedby="basic-addon1", rows="5", name="qualification")
     button(class="btn btn-default", type="submit") Submit
