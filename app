@@ -2,7 +2,6 @@
 express = require('express')
 app = express()
 
-require('tingyun')
 #config server
 require('./config')(app, express)
 

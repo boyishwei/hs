@@ -12,12 +12,12 @@ module.exports=function(app){
  //         });
   User.find(function (err, kittens) {
       if (err) return console.error(err);
-        console.log(kittens);
+        console.log(kittens.length);
         })
 
   // invoked for any requested passed to this router
   router.use(function(req, res, next) {
-    console.log("middle ware")
+      console.log('hi user')
     next()
   });  
 
@@ -45,6 +45,7 @@ module.exports=function(app){
   })
 
   router.get('/', function(req, res, next) {
+      console.log('user index')
     res.send('hello you! User index')
   }) 
 

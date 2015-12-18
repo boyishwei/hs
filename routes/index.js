@@ -18,17 +18,7 @@ module.exports = function(app){
       });
 
   app.use(function(req, res){
-      console.log('route not handled');
-      res.send('404 - not found');
+      console.log('hello 404')
+      res.status(404).render('position/new');
       });
- // var normalizedPath = require("path").join(__dirname);
-
- // var routes = [] 
- // require("fs").readdirSync(normalizedPath).forEach(function(file) {
- //   console.log(file)
- //   if(file != "index.js")
- //     routes.push(require('./' + file)(express))
- // });
-
- // return routes
 }

@@ -8,3 +8,8 @@
   color: #767676;
   border-top: 1px solid #EEE;
 }
+
+.hs-info{
+  border-top: 1px solid #EEE;
+  margin: 0 0 40px 0;
+}

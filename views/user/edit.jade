@@ -1,0 +1,11 @@
+extends ../layouts/application
+
+block content
+  form(action="/user/save")
+    div(class="form-group")
+      label(class="form-group-addon",id="basic-addon") Name 
+      input(class=type="text", class="form-control", placeholder="name" ,aria-describedby="basic-addon1", name="name")
+    div(class="form-group")
+      label(class="form-group-addon",id="basic-addon") Role 
+      input(class=type="text", class="form-control", placeholder="Role" ,aria-describedby="basic-addon1", name="role")
+    button(class="btn btn-default", type="submit") Submit

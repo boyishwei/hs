@@ -1,0 +1,16 @@
+extends ../layouts/application
+
+block content
+  div(class="form-group")
+    label(class="form-group-addon",id="basic-addon") Job ID 
+    p(class="hs-info text-muted") #{position.job_id}
+  div(class="form-group")
+    label(class="form-group-addon",id="basic-addon") Title
+    p(class="hs-info text-muted") #{position.title}
+  div(class="form-group")
+    label(class="form-group-addon",id="basic-addon1") Description 
+    p(class="hs-info text-muted") #{position.desc}
+  div(class="form-group")
+    label(class="form-group-addon",id="basic-addon1") Qualifications 
+    p(class="hs-info text-muted",aria-describedby="basic-addon1") #{position.qualification}
+    a(class="btn btn-primary", href="/position/#{position.id}/edit") Edit 
