@@ -1,0 +1,19 @@
+- url= position? "/position/update" : "/position/save"
+
+form(action="#{url}")
+  div(class="form-group")
+    label(class="form-group-addon",id="basic-addon") Job ID 
+    input(class=type="text", class="form-control", placeholder="猎上职位ID" ,aria-describedby="basic-addon1", name="job_id" value="#{position ? position.job_id:''}") 
+    input(type='hidden' value="#{position?position.id:''}" name='id')
+  div(class="form-group")
+    label(class="form-group-addon",id="basic-addon") Title
+    input(class=type="text", class="form-control", placeholder="职位ID" ,aria-describedby="basic-addon1", name="title" value="#{position ? position.title : ''}")
+  div(class="form-group")
+    label(class="form-group-addon",id="basic-addon1") Description 
+    textarea(class=type="text", class="form-control", placeholder="职位描述" ,aria-describedby="basic-addon1", rows="5", name="desc") #{position ? position.title : ''}
+  div(class="form-group")
+    label(class="form-group-addon",id="basic-addon1") Qualifications 
+    textarea(class=type="text", class="form-control", placeholder="任职要求" ,aria-describedby="basic-addon1", rows="5", name="qualification") #{position ? position.qualification : ''}
+  #div-btn.form-group 
+    button(class="btn btn-primary", type="type") Submit
+    a(class="btn btn-info", role="button", href="/position/show/#{position.id}") Cancel 
