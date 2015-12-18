@@ -14,11 +14,6 @@ form(action="#{url}")
   div(class="form-group")
     label(class="form-group-addon",id="basic-addon1") Qualifications 
     textarea(class=type="text", class="form-control", placeholder="任职要求" ,aria-describedby="basic-addon1", rows="5", name="qualification") #{position ? position.qualification : ''}
-  div
-    <button class="btn btn-primary" type="submit">Button</button>
-    <input class="btn btn-default" type="button" value="Input">
-
-    <button class="btn btn-default" type="submit">Button</button>
-    <input class="btn btn-default" type="button" value="Input">
-    button(class="btn btn-primary", type="type") Submit
-    a(class="btn btn-info", role="button", href="/position/show/#{position.id}") Cancel 
+  #div-btn.form-group 
+    button(class="btn btn-primary btn-gap", type="type") Submit
+    a(class="btn btn-info btn-gap", role="button", href="/position/show/#{position.id}") Cancel 

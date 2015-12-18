@@ -1,3 +1,4 @@
+var mongoose = require('mongoose')
 var piplineSchema = mongoose.Schema({
   status: String,
   job_id: String,
@@ -5,4 +6,5 @@ var piplineSchema = mongoose.Schema({
   assignee_id: String,
 })
 
-var Pipline = mongoose.model('pipline', piplineSchema)
+var Pipline = mongoose.model('Pipline', piplineSchema)
+module.exports = Pipeline 

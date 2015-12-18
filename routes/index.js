@@ -11,6 +11,7 @@ module.exports = function(app){
 
   require('./position')(app)
   require('./user')(app)
+  require('./pipeline')(app)
 
   app.use(function(err, req, res, next){
       console.log('unhandled error detected: ' + err.message);

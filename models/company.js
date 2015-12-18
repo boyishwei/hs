@@ -1,3 +1,4 @@
+var mongoose = require('mongoose')
 var companySchema = mongoose.Schema({
   name: String,
   address: String,

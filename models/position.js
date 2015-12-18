@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose')
 var positionSchema = mongoose.Schema({
   job_id: String,    
   title: String,
@@ -12,6 +12,6 @@ var positionSchema = mongoose.Schema({
  // salary_rank: String,
 })
 
-var Position = mongoose.model('position', positionSchema)
+var Position = mongoose.model('Position', positionSchema)
 
 module.exports = Position

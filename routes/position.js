@@ -1,6 +1,6 @@
 module.exports=function(app){
   var router = require('express').Router()
-    var model = require('../models');
+  var model = require('../models');
   var Position = model.Position;  
 
   // invoked for any requested passed to this router
@@ -29,6 +29,7 @@ module.exports=function(app){
         res.redirect('/positions');
         })
       })
+
   router.get('/show/:id',function(req,res){
         Position.findById(req.params.id, function(err, position){
            if(position == undefined || err) 
@@ -37,6 +38,7 @@ module.exports=function(app){
              res.render('position/show', {position:position})
         })
       })
+
   router.get('/:id/edit',function(req, res){
       Position.findById(req.params.id, function(err, position){
          if(position == undefined || err) 
@@ -46,19 +48,19 @@ module.exports=function(app){
       }) 
     }) 
 
-  router.get('/update',function(){
-      var position = new Position({
+  router.get('/update',function(req, res){
+      var position = {
           job_id: req.query.job_id,
           title: req.query.title,
           desc: req.query.desc,
           qualification: req.query.qualification
-        })  
+        }  
       console.log('updating...') 
-      Position.findByIdAndUpdate(req.query.id, position, function(err, position){
+      Position.findOneAndUpdate(req.query.id, position, function(err, position){
           if(!position || err)
-            res.send('update failed')
+            res.send('update failed' + err)
           else
-            console.log('updated-----'+ position.id)
+            res.redirect("/position/show/" + position.id)
       })
   })
 
